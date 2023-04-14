@@ -924,10 +924,15 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@parcel/css-win32-x64-msvc@1.9.0":
+"@parcel/css-linux-x64-gnu@1.9.0":
   version "1.9.0"
-  resolved "https://registry.npmmirror.com/@parcel/css-win32-x64-msvc/-/css-win32-x64-msvc-1.9.0.tgz"
-  integrity sha512-L4s84iK4PXnO/SzZyTsazAuzadtEYLGHgi1dyKYxMMGCjToCDjuwsn5K8bykeewZxjoL7RaunQGqCBRt5dfB5Q==
+  resolved "https://registry.npmmirror.com/@parcel/css-linux-x64-gnu/-/css-linux-x64-gnu-1.9.0.tgz"
+  integrity sha512-QufawDkaiOjsh6jcZk/dgDBPMqBtIs+LGTOgcJDM6XL4mcbDNxO6VkDANssRUgPnbG66YYy419CUWFta9aeVOg==
+
+"@parcel/css-linux-x64-musl@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.npmmirror.com/@parcel/css-linux-x64-musl/-/css-linux-x64-musl-1.9.0.tgz"
+  integrity sha512-s528buicSd83/5M5DN31JqwefZ8tqx4Jm97srkLDVBCZg+XEe9P0bO7q1Ngz5ZVFqfwvv8OYLPOtAtBmEppG3g==
 
 "@parcel/css@1.9.0":
   version "1.9.0"
@@ -3437,15 +3442,15 @@ esbuild-jest@0.5.0:
     "@babel/plugin-transform-modules-commonjs" "^7.12.13"
     babel-jest "^26.6.3"
 
-esbuild-windows-64@0.14.36:
+esbuild-linux-64@0.14.36:
   version "0.14.36"
-  resolved "https://registry.npmmirror.com/esbuild-windows-64/-/esbuild-windows-64-0.14.36.tgz"
-  integrity sha512-+p4MuRZekVChAeueT1Y9LGkxrT5x7YYJxYE8ZOTcEfeUUN43vktSn6hUNsvxzzATrSgq5QqRdllkVBxWZg7KqQ==
+  resolved "https://registry.npmmirror.com/esbuild-linux-64/-/esbuild-linux-64-0.14.36.tgz"
+  integrity sha512-vFVFS5ve7PuwlfgoWNyRccGDi2QTNkQo/2k5U5ttVD0jRFaMlc8UQee708fOZA6zTCDy5RWsT5MJw3sl2X6KDg==
 
-esbuild-windows-64@0.14.49:
+esbuild-linux-64@0.14.49:
   version "0.14.49"
-  resolved "https://registry.npmmirror.com/esbuild-windows-64/-/esbuild-windows-64-0.14.49.tgz"
-  integrity sha512-+Cme7Ongv0UIUTniPqfTX6mJ8Deo7VXw9xN0yJEN1lQMHDppTNmKwAM3oGbD/Vqff+07K2gN0WfNkMohmG+dVw==
+  resolved "https://registry.npmmirror.com/esbuild-linux-64/-/esbuild-linux-64-0.14.49.tgz"
+  integrity sha512-hYmzRIDzFfLrB5c1SknkxzM8LdEUOusp6M2TnuQZJLRtxTgyPnZZVtyMeCLki0wKgYPXkFsAVhi8vzo2mBNeTg==
 
 esbuild@>=0.8.50, esbuild@0.14.49:
   version "0.14.49"
