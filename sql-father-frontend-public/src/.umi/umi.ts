@@ -27,16 +27,25 @@ async function render() {
     },
   });
 
+  const contextOpts = pluginManager.applyPlugins({
+    key: 'modifyContextOpts',
+    type: ApplyPluginsType.modify,
+    initialValue: {},
+  });
+
+  const basename = contextOpts.basename || '/';
+  const historyType = contextOpts.historyType || 'browser';
+
+  const history = createHistory({
+    type: historyType,
+    basename,
+    ...contextOpts.historyOpts,
+  });
+
   return (pluginManager.applyPlugins({
     key: 'render',
     type: ApplyPluginsType.compose,
     initialValue() {
-      const contextOpts = pluginManager.applyPlugins({
-        key: 'modifyContextOpts',
-        type: ApplyPluginsType.modify,
-        initialValue: {},
-      });
-      const basename = contextOpts.basename || '/';
       const context = {
         routes,
         routeComponents,
@@ -44,17 +53,24 @@ async function render() {
         rootElement: contextOpts.rootElement || document.getElementById('root'),
         publicPath,
         runtimePublicPath,
-        history: createHistory({
-          type: contextOpts.historyType || 'browser',
-          basename,
-          ...contextOpts.historyOpts,
-        }),
+        history,
+        historyType,
         basename,
+        callback: contextOpts.callback,
       };
-      return renderClient(context);
+      const modifiedContext = pluginManager.applyPlugins({
+        key: 'modifyClientRenderOpts',
+        type: ApplyPluginsType.modify,
+        initialValue: context,
+      });
+      return renderClient(modifiedContext);
     },
   }))();
 }
 
 
 render();
+
+window.g_umi = {
+  version: '4.0.65',
+};
